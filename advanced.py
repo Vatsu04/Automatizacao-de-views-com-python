@@ -22,7 +22,7 @@ def run_advanced():
         def __init__(self, masteradvanced):
             self.masteradvanced = masteradvanced
             masteradvanced.title("YouTube View Automator")
-            #root.iconbitmap("favicon.ico")
+            root.iconbitmap("favicon.ico")
 
             # Create and place widgets
             self.video_label = Label(masteradvanced, text="Video Link:")
@@ -80,13 +80,22 @@ def run_advanced():
             self.start_button = Button(masteradvanced, text="Start", command=self.start_bot)
             self.start_button.grid(row=7, column=0, padx=10, pady=10)
 
-            self.quit_button = Button(masteradvanced, text="Quit", command=masteradvanced.quit)
-            self.quit_button.grid(row=7, column=1, padx=10, pady=10)
+            self.clear_button = Button(masteradvanced, text="Clear Form", command=self.clear_form)
+            self.clear_button.grid(row=7, column=1, padx=10, pady=10)
             
             self.simple_run = Button(masteradvanced, text="Simple", command=self.run_simple)
-            self.simple_run.grid(row=7, column=3, padx=10, pady=10  )
+            self.simple_run.grid(row=7, column=2, padx=10, pady=10  )
             
         #os.system('shutdown /p /f')
+        
+        def clear_form(self):
+            self.video_entry.delete(0, END)
+            self.views_entry.delete(0, END)
+            self.duracao_entry.delete(0, END)
+            self.horas_vagas_entry.delete(0, END)
+            self.views_rec.set(0)
+            self.premium_var.set(0)
+            self.shutdown_var.set(0)
         
         def run_simple(self):
             

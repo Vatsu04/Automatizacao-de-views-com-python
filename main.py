@@ -13,6 +13,7 @@ def openmain():
             mastermain.title("Main Menu")
             self.label = Label(mastermain , text="Disclaimer: leave the web browser window on FULL SCREEN for this work!")
             self.label.pack(padx=10, pady=10)
+            root.iconbitmap("favicon.ico")
             # Create and place widgets
             self.label = Label(mastermain, text="Choose a version of the automator to run:")
             self.label.pack(padx=10, pady=10)
