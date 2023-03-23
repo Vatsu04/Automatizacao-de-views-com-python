@@ -88,7 +88,7 @@ def run_simple():
                         auto.click(x=1296, y=55)
                         auto.hotkey("ctrl", "v")
                         auto.press("enter")
-                        time.sleep(47)
+                        time.sleep(35)
                         auto.hotkey("ctrl", "w")
                         auto.hotkey("ctrl", "t")
                         
